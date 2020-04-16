@@ -502,6 +502,9 @@ void screen_main() {
   } else if (value_desk6 == 5) {
     tft.println ("Drucklos");
   }
+
+  tft.fillRect(15, 200, 100, 40, BLACK);
+  printn(0,0, 1);
 }
 
 
