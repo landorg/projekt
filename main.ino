@@ -213,14 +213,14 @@ void loop() {
     pressure = max((analogRead(A15) - offset) * 13.7895  / (fullScale - offset) + 0.07, 0);
     Serial.print("pressure: ");
     Serial.println(pressure);
-    
+
     tft.setTextColor(WHITE);
     tft.setTextSize(4);
     tft.setCursor(15, 200);    //x,y
 
 
     // wenn der unterschied >= 0.1..
-    if ((pressure - pressure_last_displayed) * -1 >= 0.1) {
+    if ((pressure - pressure_last_displayed) * -1.0 >= 0.1) {
 
       // nur wenn upgedated wird den wert von pld updaten
       pressure_last_displayed = pressure;
