@@ -195,6 +195,10 @@ void printn(float value, int digits) {
     Serial.print("buffer2: ");
     Serial.println(buffer);
 
+    tft.setTextColor(WHITE);
+    tft.setTextSize(4);
+    tft.setCursor(15, 200);    //x,y
+    tft.fillRect(15, 200, 100, 40, BLACK);
     tft.println(buffer);
 }
 
@@ -222,12 +226,6 @@ void loop() {
       // nur wenn upgedated wird den wert von pld updaten
       pressure_last_displayed = pressure;
 
-      tft.setTextColor(WHITE);
-      tft.setTextSize(4);
-      tft.setCursor(15, 200);    //x,y
-      // schon die 2/3 befehle die des display updaten oder?
-      // warum des delay?
-      tft.fillRect(15, 200, 100, 40, BLACK);
       printn(pressure, 1);
 
     }
@@ -503,10 +501,6 @@ void screen_main() {
     tft.println ("Drucklos");
   }
 
-  tft.setTextColor(WHITE);
-  tft.setTextSize(4);
-  tft.setCursor(15, 200);    //x,y
-  tft.fillRect(15, 200, 100, 40, BLACK);
   printn(pressure, 1);
 }
 
