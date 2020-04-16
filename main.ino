@@ -323,7 +323,7 @@ void loop() {
           bar_va = bar_va + 0.1;
           screen_open_time = millis();
           digitalWrite(40, LOW);
-          (100);                 // Entprellen
+          delay(100);                 // Entprellen
           screen_f22();
           digitalWrite(40, HIGH);
         }
@@ -332,7 +332,7 @@ void loop() {
       if (p.x > 115 && p.y > 255) {
         if (bar_va < 0.10) {
           bar_va = 0;
-          (500);
+          delay(500);
 
         } else {
           bar_va = bar_va - 0.1;
