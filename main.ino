@@ -187,10 +187,12 @@ void printn(float value, int digits) {
 
     char buffer[4];     //ex 8
 
-    dtostrf(value, 2, digits, buffer);      // ## Roli erklären bitte - für zweite Kommastelle: (pressure,2, 2, buffer);
     Serial.print("value: ");
     Serial.println(value);
     Serial.print("buffer: ");
+    Serial.println(buffer);
+    dtostrf(value, 2, digits, buffer);      // ## Roli erklären bitte - für zweite Kommastelle: (pressure,2, 2, buffer);
+    Serial.print("buffer2: ");
     Serial.println(buffer);
 
     tft.println(buffer);
