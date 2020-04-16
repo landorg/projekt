@@ -221,7 +221,7 @@ void loop() {
 
 
     // wenn der unterschied >= 0.1..
-    if ((pressure - pressure_last_displayed) * -1.0 >= 0.1) {
+    if (abs(pressure - pressure_last_displayed) >= 0.1) {
 
       // nur wenn upgedated wird den wert von pld updaten
       pressure_last_displayed = pressure;
